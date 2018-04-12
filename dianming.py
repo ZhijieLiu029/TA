@@ -7,8 +7,7 @@ import pandas as pd
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QPixmap
 import DianmingWin
-from datastore import Students
-from datastore import SRecords
+from datastore import Student
 
 
 def updateui():
@@ -23,7 +22,10 @@ if __name__ == '__main__':
     # open data file
     datafile: Union[bytes, str] = os.path.join(os.path.abspath('.'), 'Datas/JH1501.xlsx')
     studentslist = pd.read_excel(datafile)
-    SS = pd.read_excel(datafile)
+    for tr in studentslist:
+        tempstudent = Student(tr.)
+
+
 
     # init the UIs
     app = QtWidgets.QApplication(sys.argv)
